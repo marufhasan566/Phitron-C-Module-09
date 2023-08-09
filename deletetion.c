@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 int main()
 {
@@ -8,17 +9,13 @@ int main()
     {
         scanf("%d", &arr[i]);
     }
-    // int i = 0, j = n - 1, temp = i;
-    int i = 0, j = n - 1, temp;
-    while (i < j)
+    int position;
+    scanf("%d", &position);
+    for (int i = position - 1; i < n; i++)
     {
-        temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-        i++;
-        j--;
+        arr[i] = arr[i + 1];
     }
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n - 1; i++)
     {
         printf("%d ", arr[i]);
     }

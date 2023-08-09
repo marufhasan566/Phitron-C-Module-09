@@ -3,21 +3,22 @@ int main()
 {
     int n;
     scanf("%d", &n);
-    int arr[n + 1];
+    int array[n + 1];
     for (int i = 0; i < n; i++)
     {
-        scanf("%d", &arr[i]);
+        scanf("%d", &array[i]);
     }
     int position, value;
     scanf("%d %d", &position, &value);
     for (int i = n; i >= position; i--)
     {
-        arr[i] = arr[i - 1];
+        array[i] = array[i - 1];
     }
-    arr[position - 1] = value;
+    array[position - 1] = value;
+    // Print
     for (int i = 0; i <= n; i++)
     {
-        printf("%d ", arr[i]);
+        printf("%d ", array[i]);
     }
     return 0;
 }
